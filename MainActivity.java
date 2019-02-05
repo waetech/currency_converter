@@ -47,6 +47,18 @@ public class MainActivity extends AppCompatActivity {
         Log.i("amount", bitcoinEditText.getText().toString());
     }
 
+
+    public void yenConvertFunction(View view){
+
+        EditText yenEditText = findViewById(R.id.yenEditText);
+        Double dollarAmountDouble4 = Double.parseDouble(yenEditText.getText().toString());
+        Double yenAmount = dollarAmountDouble4 * 109.96;
+
+        //Show amount as Toast for Yen
+        Toast.makeText(this, "$" + String.format("%.2f", yenAmount), Toast.LENGTH_SHORT).show();
+        Log.i("amount", yenEditText.getText().toString());
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
